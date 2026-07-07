@@ -22,20 +22,6 @@ Always display the detailed overview of model its working on right now
 display the each step output one after the other
 display total ouput 
 `;
-// const completion = await client.chat.completions.create({
-//   model: "gpt-5-nano",
-//   messages: [
-//     { role: "system", content: SYSTEM_PROMPT },
-//     { role: "user", content: "Hey there! right now im graduted and sitting at home so thinking to start prep for ai engineer role. can you give me the road map for domain ai engineer" },
-//   ],
-//   stream:true
-
-// });
- 
-// for await(const event of completion){
-//     process.stdout.write(event.choices[0]?.delta?.content || "")
-// }
- 
 const completion = await client.chat.completions.create({
   model: "gpt-5-nano",
   messages: [
