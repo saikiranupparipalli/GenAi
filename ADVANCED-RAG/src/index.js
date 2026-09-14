@@ -3,7 +3,7 @@ import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { QdrantVectorStore } from "@langchain/qdrant";
 
-const key = "";
+const key = process.env.OPENAI_API_KEY;
 // console.log(apiKey)
 async function pdf(filePath) {
   const loader = new PDFLoader(filePath);

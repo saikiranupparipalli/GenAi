@@ -3,12 +3,12 @@ import { QdrantVectorStore } from "@langchain/qdrant";
 import OpenAI from "openai";
 
 const client = new OpenAI({
-  apiKey: " ",
+  apiKey: process.env.OPENAI_API_KEY,
 });
 async function query(userQuery) {
   const embeddings = new OpenAIEmbeddings({
     model: "text-embedding-3-small",
-    apiKey: "",
+    apiKey: process.env.OPENAI_API_KEY,
   });
 
   const vectorStore = await QdrantVectorStore.fromExistingCollection(
