@@ -3,12 +3,12 @@ import { QdrantVectorStore } from "@langchain/qdrant";
 import OpenAI from "openai";
 
 const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: " ",
 });
 async function query(userQuery) {
   const embeddings = new OpenAIEmbeddings({
     model: "text-embedding-3-small",
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: "",
   });
 
   const vectorStore = await QdrantVectorStore.fromExistingCollection(
@@ -42,6 +42,6 @@ async function query(userQuery) {
   console.log("LLM RESPONSE \n", llmRes.choices[0].message.content);
 }
 
-query('what does asynchronous functions do?');
+query("what does asynchronous functions do?");
 
 // 'what does asynchronous functions do?'
