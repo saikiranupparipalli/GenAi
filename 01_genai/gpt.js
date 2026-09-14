@@ -36,3 +36,4 @@ for await(const event of completion){
     process.stdout.write(event.choices[0]?.delta?.content || "")
 }
  
+
