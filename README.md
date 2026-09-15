@@ -1,1 +1,5 @@
-# GenAi
+# javaScript
+
+```
+console.log('hey')
+```
